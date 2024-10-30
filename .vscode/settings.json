@@ -8,6 +8,15 @@
             "database": "airflow",
             "username": "airflow",
             "name": "Testing Postgres"
+        },
+        {
+            "server": "localhost",
+            "port": 9042,
+            "previewLimit": 50,
+            "askForPassword": true,
+            "driver": "Cassandra",
+            "name": "Cassandra test",
+            "username": "cassandra"
         }
     ]
 }

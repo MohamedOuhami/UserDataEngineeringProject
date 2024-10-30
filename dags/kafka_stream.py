@@ -5,6 +5,7 @@ from airflow.operators.python import PythonOperator
 # from utils.utils import fetch_data,format_data
 from kafka import KafkaProducer
 import time
+from uuid import uuid4
 
 import requests
 def fetch_data():
@@ -19,6 +20,7 @@ def fetch_data():
 # Now, the respone has too many info, we need to extract the ones whe truly need
 def format_data(res):
     data = {}
+    data['id'] = str(uuid4())  # Generate a new UUID for each record
     data['first_name'] = res['name']['first']
     data['last_name'] = res['name']['last']
     data['address'] = str(res['location']['street']['name'] + ' ,' + res['location']['city'] + ' ,' + res['location']['state'] + ' ,' + res['location']['country'])
@@ -57,6 +59,8 @@ def stream_data():
         try :
             res = fetch_data()
             res = format_data(res)
+            
+            print(json.dumps(res))
             
             # Sending the data into Kafka
             producer.send("users_created",json.dumps(res).encode("utf-8"))
