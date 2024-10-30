@@ -12,7 +12,7 @@ This project demonstrates how to stream data from Kafka to Cassandra using Apach
 - Apache Airflow
 
 ## Project Architecture
-![Project Architecture](images/project_architecture.png)
+![Project Architecture](images/project_architecture.jpg)
 
 ## Services
 The following services are included in this project:
@@ -47,10 +47,10 @@ The following services are included in this project:
    The application will read data from the Kafka topic using the jupyter notebook [spark_stream_cassandra.ipynb] and stream it into the Cassandra table `created_users`.
 
 ## Images
-- **Data in Cassandra**: ![Data in Cassandra](images/data_in_cassandra.png)
-- **Jobs**: ![Jobs](images/jobs.png)
-- **Message Coming to Topics**: ![Message Coming to Topics](images/message_coming_to_topics.png)
-- **Streaming to Cassandra**: ![Streaming to Cassandra](images/streaming_to_cassandra.png)
+- **Data in Cassandra**: ![Data in Cassandra](images/data_in_cassandra.jpg)
+- **Jobs**: ![Jobs](images/jobs.jpg)
+- **Message Coming to Topics**: ![Message Coming to Topics](images/message_coming_to_topics.jpg)
+- **Streaming to Cassandra**: ![Streaming to Cassandra](images/streaming_to_cassandra.jpg)
 
 ## Conclusion
 This project illustrates the integration of Kafka, Spark, and Cassandra for real-time data processing, as well as the orchestration of the workflow using Apache Airflow.
