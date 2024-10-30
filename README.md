@@ -16,10 +16,10 @@ This project demonstrates how to stream data from Kafka to Cassandra using Apach
 
 ## Services
 The following services are included in this project:
-- **Kafka**: A distributed messaging system used for sending messages between applications.
-- **Cassandra**: A NoSQL database that stores the streamed data.
-- **Spark**: A unified analytics engine for big data processing.
-- **Airflow**: A platform to programmatically author, schedule, and monitor workflows. The fetching of data and streaming using the broker is managed inside an Apache Airflow DAG.
+- **Kafka**: Acts as the message broker, facilitating the communication between the producer (fetching data from the API) and the consumer (Spark streaming).
+- **Cassandra**: Serves as the NoSQL database where streamed data is stored, enabling quick read and write operations.
+- **Spark**: Processes and transforms the streamed data in real time before inserting it into Cassandra.
+- **Airflow**: Automates the workflow, managing the fetching of data from the API and the streaming process through an Apache Airflow DAG.
 
 ![Apache Airflow DAG](images/airflow.png)
 
