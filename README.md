@@ -26,8 +26,8 @@ The following services are included in this project:
 ## Running the Project
 1. **Clone the repository**:
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/MohamedOuhami/UserDataEngineeringProject
+    cd UserDataEngineeringProject
     ```
 
 2. **Build and start services using Docker Compose**:
